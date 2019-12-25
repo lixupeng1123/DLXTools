@@ -1,0 +1,16 @@
+﻿<script type="text/javascript">
+    $.ajax({
+        type: "POST",
+        url: "/Home/GetString",
+        contentType: "application/x-www-form-urlencoded",
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Something went wrong!");
+        },
+        success: function (result) {
+            $("#msg").html(result);
+        }
+
+    });
+</script>
+<h1>欢迎!</h1>
+<div id="msg"> </div>
